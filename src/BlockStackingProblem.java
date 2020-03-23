@@ -52,12 +52,13 @@ public class BlockStackingProblem {
 		}
 		// Sort the array
 		Arrays.sort(arrOfOrientations);
-		
+
 		int[] heights = new int[count];
 		
 		//add the heights of each orientation to the new array
 		for(int i = 0; i < count; i++) {
 			heights[i] = arrOfOrientations[i].getHeight();
+			
 		}
 		
 		// calculates the max height that is allowed based on the block that is on the bottom
@@ -68,7 +69,7 @@ public class BlockStackingProblem {
 			
 			for(int j = 0; j < i; j++) {
 				Block prev = arrOfOrientations[j];
-				if(curr.getWidth() < prev.getWidth() && curr.getHeight() < prev.getHeight()) {
+				if(curr.getWidth() < prev.getWidth() && curr.getLength() < prev.getLength()) {
 					height = Math.max(height, heights[j]);
 				}
 			}
@@ -85,29 +86,36 @@ public class BlockStackingProblem {
 	}
 	
 	public static void main(String[] args) {
+		Block[] arr = new Block[4]; 
+        arr[0] = new Block(4, 6, 7); 
+        arr[1] = new Block(1, 2, 3); 
+        arr[2] = new Block(4, 5, 6); 
+        arr[3] = new Block(10, 12, 32); 
+		BlockStackingProblem blockStackingProblem = new BlockStackingProblem();
+		System.out.println(blockStackingProblem.maxHeight(arr, 4));
 		
-		try {
-			BlockStackingProblem blockStackingProblem = new BlockStackingProblem();
-			File file = new File(args[0]); 
-			BufferedReader br = new BufferedReader(new FileReader(file));
-
-			int count = Integer.parseInt(br.readLine());
-			String st; 
-			Block[] arr = new Block[count];
-			int i = 0;
-			while ((st = br.readLine()) != null) {
-				String[] parts = st.split(" ");
-				Block block = new Block(Integer.parseInt(parts[0]), Integer.parseInt(parts[1]), Integer.parseInt(parts[2]));
-				arr[i] = block;
-				i++;
-			}
-			BufferedWriter writer = new BufferedWriter(new FileWriter(args[1]));
-		    writer.write(blockStackingProblem.maxHeight(arr, count));
-		    writer.close();
-		    br.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		} 
+//		try {
+//			BlockStackingProblem blockStackingProblem = new BlockStackingProblem();
+//			File file = new File(args[0]); 
+//			BufferedReader br = new BufferedReader(new FileReader(file));
+//
+//			int count = Integer.parseInt(br.readLine());
+//			String st; 
+//			Block[] arr = new Block[count];
+//			int i = 0;
+//			while ((st = br.readLine()) != null) {
+//				String[] parts = st.split(" ");
+//				Block block = new Block(Integer.parseInt(parts[0]), Integer.parseInt(parts[1]), Integer.parseInt(parts[2]));
+//				arr[i] = block;
+//				i++;
+//			}
+//			BufferedWriter writer = new BufferedWriter(new FileWriter(args[1]));
+//		    writer.write(blockStackingProblem.maxHeight(arr, count));
+//		    writer.close();
+//		    br.close();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		} 
 	}
 	
 }
