@@ -16,3 +16,4 @@ You should now have a Block.class file and BlockStackingProblem.class file in th
 java BlockStackingProblem "inputfilename.txt" "outputfilename.txt"
 
 You should see your output file in the folder.
+
