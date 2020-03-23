@@ -106,7 +106,7 @@ public class BlockStackingProblem {
 			
 		}
 		
-
+		//stack details are all the details to get the output that is desired by the problem
 		return new StackDetails(maxHeight, totBlocks, stack, maxIndex);
 
 	}
