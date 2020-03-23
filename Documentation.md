@@ -25,7 +25,7 @@ Our interesting design decision was that we chose to optimize the maximum in a b
 Our code implements the first part of our algorithm with the method maximumHeight in the BlockStackingProblem class. In that class, we get the blocks different orientations and then store them in an array. In that same method, we sort the array using the sort method to get the blocks in order based on their base. Then finally, we calculate the max height that can be obtained for every block orientation at the top, and any blocks with a smaller base area goes below it.
 
 ## How we tested our code and the results
-We tested our code by making a sample input file with the following numbers 
+We tested our code by making a sample input file with the following input
 
 10 <br />
 383 886 777 <br />
@@ -39,4 +39,19 @@ We tested our code by making a sample input file with the following numbers
 782 530 862 <br />
 123 67 135 <br />
 
-We ran the program with this input file and wrote to an output file, seeing if we got the expected output. If we got this number in our output file, we knew our algorithm succesfully worked. Otherwise, we edited our algorithm.
+and ensured that we got the following output, as well as a height of 5588:
+12 <br />
+793 915 335<br />
+782 862 530<br />
+530 782 862<br />
+492 649 386<br />
+429 567 368<br />
+426 540 926<br />
+386 492 649<br />
+368 429 567<br />
+362 421 27<br />
+172 211 736<br /><br />
+123 135 67<br />
+67 123 135<br />
+
+This was the first sample file that was given to us, and we also tested it on the second sample file. We made sure that the output that we got was the same output that was in the output file given to us. We ran the program with this input file and wrote to an output file, seeing if we got the expected output. If we got this number in our output file, we knew our algorithm succesfully worked. Otherwise, we edited our algorithm. In addition, we tested it on potential edge cases that we found, and made sure that the algorithm was consistent for all cases. 
