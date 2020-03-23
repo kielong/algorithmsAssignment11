@@ -6,7 +6,9 @@ There are two files that I am submitting: Block.java and BlockStackingProblem.ja
 To compile this code, you first clone the repository onto your desktop. BlockStackingProblem.java and Block.java should be in your src folder. You should put your input file in this folder as well. If not you can use the "mv" command to move it to the same folder that has the java files. Once this is done, you open up your terminal and "cd" into the folder containing the java files--perhaps the src folder. Compile the java code with the following command:
 
 javac Block.java
-//
+
+Then, 
+
 javac BlockStackingProblem.java
 
 You should now have a Block.class file and BlockStackingProblem.class file in the folder. You can check by writing "ls" in the command line. Finally you run the java program with the file you're reading and the file you're outputting by typing the following command:
