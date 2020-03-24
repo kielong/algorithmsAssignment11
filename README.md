@@ -15,7 +15,7 @@ Finally,
 
 javac BlockStackingProblem.java
 
-You should now have a Block.class file and BlockStackingProblem.class file in the folder. You can check by writing "ls" in the command line. Finally you run the java program with the file you're reading and the file you're outputting by typing the following command:
+You should now have a Block.class file, StackDetails.class, and BlockStackingProblem.class file in the folder. You can check by writing "ls" in the command line. Finally you run the java program with the file you're reading and the file you're outputting by typing the following command:
 
 java BlockStackingProblem "inputfilename.txt" "outputfilename.txt"
 
